@@ -42,7 +42,7 @@ Partial Class frmSelectFiles
 		' 
 		txtFile2Name.Location = New Point(22, 54)
 		txtFile2Name.Name = "txtFile2Name"
-		txtFile2Name.Prompt = "Select OLDEST File"
+		txtFile2Name.Prompt = "Select OLDER File"
 		txtFile2Name.Size = New Size(157, 23)
 		txtFile2Name.TabIndex = 1
 		' 
@@ -73,7 +73,7 @@ Partial Class frmSelectFiles
 		btnCompare.Name = "btnCompare"
 		btnCompare.Size = New Size(75, 23)
 		btnCompare.TabIndex = 4
-		btnCompare.Text = "Browse"
+		btnCompare.Text = "&Compare"
 		btnCompare.UseVisualStyleBackColor = True
 		' 
 		' btnClose
@@ -85,14 +85,14 @@ Partial Class frmSelectFiles
 		btnClose.Name = "btnClose"
 		btnClose.Size = New Size(75, 23)
 		btnClose.TabIndex = 5
-		btnClose.Text = "Browse"
+		btnClose.Text = "C&lose"
 		btnClose.UseVisualStyleBackColor = True
 		' 
 		' frmSelectFiles
 		' 
 		AutoScaleDimensions = New SizeF(7F, 15F)
 		AutoScaleMode = AutoScaleMode.Font
-		ClientSize = New Size(426, 93)
+		ClientSize = New Size(418, 85)
 		ControlBox = False
 		Controls.Add(btnClose)
 		Controls.Add(btnCompare)
