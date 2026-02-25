@@ -47,6 +47,7 @@ Partial Class About
 		' 
 		' lblTitle
 		' 
+		lblTitle.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
 		lblTitle.Location = New Point(346, 10)
 		lblTitle.Name = "lblTitle"
 		lblTitle.Size = New Size(300, 23)

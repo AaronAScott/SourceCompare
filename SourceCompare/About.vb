@@ -31,13 +31,11 @@ Friend Class About
 		Me.Text = "About " & ProgramName
 		lblTitle.Text = ProgramName & " for Windows"
 		If My.Application.Info.Copyright <> "" Then lblCopyright.Text = My.Application.Info.Copyright
-		On Error Resume Next
-		zx0 = CStr(FileDateTime(ProgramPath & My.Application.Info.AssemblyName & ".exe"))
-		On Error GoTo 0
+		zx0 = CStr(FileDateTime(ProgramPath))
 		lblVersion.Text = "Version " & CStr(My.Application.Info.Version.Major) & "." & CStr(My.Application.Info.Version.Minor) & CStr(My.Application.Info.Version.Build) & CStr(My.Application.Info.Version.MinorRevision) & " (" & zx0 & ")"
 		If WSID() <> "" Then lblWSID.Text = "Workstation ID: " & WSID()
 		If UserName <> "" Then lblUser.Text = "User: " & UserName
-		If DBVersion = "" Then lblDBVersion.Text = "Database Version (none)" Else  lblDBVersion.Text = "Database Version " & DBVersion
+		If DBVersion = "" Then lblDBVersion.Text = "Database Version (none)" Else lblDBVersion.Text = "Database Version " & DBVersion
 		lblLicensee.Text = LicenseInfo
 		Me.Icon = frmMain.Icon
 
@@ -46,7 +44,7 @@ Friend Class About
 		If Not My.Computer.FileSystem.FileExists(Environment.SpecialFolder.UserProfile & "\OneDrive\ProgramUpdates\" & ProgramName.Replace(" ", "") & "\currentversion.txt") Then btnNotes.Enabled = False
 
 		System.Windows.Forms.Application.DoEvents() ' give things a chance to display
-     End Sub
+	End Sub
 	'**************************************************
 	'
 	' The okay button is clicked.  Unload the form.
@@ -101,6 +99,10 @@ Friend Class About
 		' Show the notes.
 
 		fNotes.Show()
+
+	End Sub
+
+	Private Sub lblTitle_Click(sender As Object, e As EventArgs) Handles lblTitle.Click
 
 	End Sub
 End Class
