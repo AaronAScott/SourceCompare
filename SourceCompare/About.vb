@@ -2,7 +2,7 @@
 Option Explicit On
 Imports System.Reflection.Emit
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel
-Imports System.Windows.Media
+
 
 Friend Class About
 	Inherits System.Windows.Forms.Form

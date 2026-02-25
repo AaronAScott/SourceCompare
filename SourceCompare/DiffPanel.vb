@@ -1,4 +1,6 @@
-﻿Public Class DiffPanel
+﻿Imports System.ComponentModel
+
+Public Class DiffPanel
 	'*************************************************************
 
 	' The DiffPanel class
@@ -28,7 +30,9 @@
 
 	' Declare public properties.  These are used to scroll the text in the panel.
 
+	<DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
 	Public Property TopIndex As Integer  ' First line to display in panel
+	<DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
 	Public Property LeftIndex As Integer ' First character to display in line.
 
 
@@ -146,6 +150,7 @@
 	' we are to display.
 
 	'*************************************************************
+	<DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
 	Public Property TextLines() As String()
 		Get
 			Return DisplayLines
@@ -161,6 +166,7 @@
 	' ShowDeletes, so turning one on turns the other off.
 
 	'*************************************************************
+	<DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
 	Public Property ShowInserts() As Boolean
 		Get
 			Return mShowInserts
@@ -178,6 +184,7 @@
 	' ShowInserts, so turning one on turns the other off.
 
 	'*************************************************************
+	<DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
 	Public Property ShowDeletes() As Boolean
 		Get
 			Return mShowDeletes
